@@ -12,34 +12,7 @@ namespace World
         static void Main(string[] args)
         {
             
-            //Monkey monkey1 = new Monkey();
-            //Monkey monkey2 = new Monkey();
-            //Monkey monkey3 = new Monkey();
-           // Whale whale1 = new Whale();
-           // Whale whale2 = new Whale();
-           // Whale whale3 = new Whale();
-            //Dolphin dolphin1 = new Dolphin();
-          //  Dolphin dolphin2 = new Dolphin();
-           // Dolphin dolphin3 = new Dolphin();
-           // Eagle eagle1 = new Eagle();
-           // Eagle eagle2 = new Eagle();
-           // Eagle eagle3 = new Eagle();
-           // Sparrow sparrow1 = new Sparrow();
-           // Sparrow sparrow2 = new Sparrow();
-           // Sparrow sparrow3 = new Sparrow();
-           // Pigeon pigeon1 = new Pigeon();
-           // Pigeon pigeon2 = new Pigeon();
-           // Pigeon pigeon3 = new Pigeon();
-            //Penguin penguin1 = new Penguin();
-            //Penguin penguin2 = new Penguin();
-           // Penguin penguin3 = new Penguin();
-           // Goldfish goldfish1 = new Goldfish();
-           // Goldfish goldfish2 = new Goldfish();
-           // Goldfish goldfish3 = new Goldfish();
-           // Eel eel1 = new Eel();
-            //Eel eel2 = new Eel();
-            //Eel eel3 = new Eel();
-
+          
             TheWorld theWorld = new TheWorld();
             List<Creature> list = new List<Creature>();
            
@@ -70,34 +43,25 @@ namespace World
             list.Add(new Eel());
             list.Add(new Eel());
             list.Add(new Eel());
-            Console.WriteLine(list[0]);
-            Console.WriteLine(list[1]);
-            Console.WriteLine(list[2]);
-            Console.WriteLine(list[3]);
-            Console.WriteLine(list[4]);
-            Console.WriteLine(list[5]);
-            Console.WriteLine(list[6]);
-            Console.WriteLine(list[7]);
-            Console.WriteLine(list[8]);
-            Console.WriteLine(list[9]);
-            Console.WriteLine(list[10]);
-            Console.WriteLine(list[11]);
-            Console.WriteLine(list[12]);
-            Console.WriteLine(list[13]);
-            Console.WriteLine(list[14]);
-            Console.WriteLine(list[15]);
-            Console.WriteLine(list[16]);
-            Console.WriteLine(list[17]);
-            Console.WriteLine(list[18]);
-            Console.WriteLine(list[19]);
-            Console.WriteLine(list[20]);
-            Console.WriteLine(list[21]);
-            Console.WriteLine(list[22]);
-            Console.WriteLine(list[23]);
-            Console.WriteLine(list[24]);
-            Console.WriteLine(list[25]);
-            Console.WriteLine(list[26]);
           
+            
+
+            for (int i = 0; i < 27; i++)
+            {
+                Console.WriteLine(list[i] + "는 " + i + "번 째 리스트입니다.");
+
+            }
+            Console.WriteLine(list[26]);
+            for(int i = 0; i < 27; i++)
+            {
+                if (list[i] is iSwimmable)
+                {
+                    Console.WriteLine(list[i] + "는 수영중");
+                }
+
+            }
+
+
 
         }
 
@@ -128,8 +92,9 @@ namespace World
     {
 
     }
-    abstract class Fish : Creature
+   abstract class Fish : Creature, iSwimmable
     {
+        
 
     }
 
@@ -137,11 +102,11 @@ namespace World
     {
 
     }
-    class Whale : Mammal
+    class Whale : Mammal, iSwimmable
     {
 
     }
-    class Dolphin: Mammal
+    class Dolphin: Mammal, iSwimmable
     {
 
     }
@@ -157,17 +122,24 @@ namespace World
     {
 
     }
-    class Penguin : Birds
+    class Penguin : Birds, iSwimmable
     {
 
     }
-    class Goldfish : Fish
+    class Goldfish : Fish, iSwimmable
     {
 
     }
-    class Eel : Fish
+    class Eel : Fish, iSwimmable
     {
 
     }
+    interface iSwimmable
+    {
+       
+
+    }
+
+
 }
 
