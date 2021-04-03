@@ -52,6 +52,7 @@ namespace World
 
             }
             Console.WriteLine(list[26]);
+
             for(int i = 0; i < 27; i++)
             {
                 if (list[i] is iSwimmable)
