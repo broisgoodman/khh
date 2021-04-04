@@ -51,7 +51,7 @@ namespace World
                 Console.WriteLine(list[i] + "는 " + i + "번 째 리스트입니다.");
 
             }
-            Console.WriteLine(list[26]);
+            
 
             for(int i = 0; i < 27; i++)
             {
