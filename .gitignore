@@ -19,3 +19,5 @@ bin-release/
 games/ddong/ddong/Library/
 games/ddong/ddong/Logs/
 games/ddong/build/
+games/BoardGame/Library/
+games/BoardGame/Logs/
